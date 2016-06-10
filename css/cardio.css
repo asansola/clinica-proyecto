@@ -213,21 +213,21 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	color: white;
 }
 
-.btn.btn-blue {
+.btn.btn-orange {
 	background: #CA5F19;
 }
 
-.btn.btn-blue:hover {
+.btn.btn-orange:hover {
 	background: #CA5F00;
 }
 
-.btn.btn-blue-fill {
+.btn.btn-orange-fill {
 	color: #CA5F19;
 	border-color: ##CA5F00;
 	background: transparent;
 }
 
-.btn.btn-blue-fill:hover {
+.btn.btn-orange-fill:hover {
 	color: white;
 	background: #CA5F19;
 }
