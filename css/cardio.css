@@ -46,6 +46,7 @@ body {
 
 /* Typography */
 
+
 p {
 	font-size: 18px;
 	line-height: 1.5;
@@ -53,9 +54,9 @@ p {
 }
 
 .especialColor{ 
-	color: #06697E;
-
+	color: #fff;
  }
+
 
 h1,
 h2,
@@ -347,7 +348,7 @@ section {
 }
 
 .intro-table-third {
-	background-image: url('../img/table-3.jpg');
+	background-image: url('../img/table-1.jpg');
 }
 
 .intro-table-hover .expand {
@@ -463,7 +464,8 @@ section {
 	height: 320px;
 	margin: 80px 0;
 	text-align: center;
-	border: 1px solid #ddd;
+	/*border: 1px solid #ddd;  */
+	background-color: #32B40A;
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
@@ -487,11 +489,11 @@ section {
 }
 
 .service .icon-holder > img.icon {
-	width: 40px;
+	width: 80px;
 }
 
 .service:hover {
-	border-color: #00a8ff;
+	border-color: #00a8f0;
 }
 
 .service:hover .icon-holder {
@@ -531,7 +533,7 @@ section {
 	height: 250px;
 	padding-top: 60px;
 	opacity: 0;
-	background: #32B40A;
+	background: #06697E;
 	-webkit-transition: opacity 0.45s ease;
 	transition: opacity 0.45s ease;
 }
