@@ -120,7 +120,7 @@ header {
 	width: 100%;
 	color: white;
 	background: rgba(28, 36, 65, 0.93);
-	background: url('../img/home-0.jpg');
+	background: url('../img/home-5.jpg');
 	background-size: cover;
 }
 
@@ -793,7 +793,7 @@ footer .social-footer li:hover a {
 	position: relative;
 	padding: 45px 30px;
 	text-align: center;
-	background: url('../img/popup.jpg');
+	background: url('../img/oficina_800x890_tinte.jpg');
 	box-shadow: none;
 	border-radius: 2px;
 }
