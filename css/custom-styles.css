@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+
 body {
     font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -551,10 +552,10 @@ section {
 /* Diseño para el over sobre los team members*/
 
 .team .cover .overlay {
-    height: 250px;
+    height: 260px;
     padding-top: 60px;
     opacity: 0;
-    background: #06697E;
+    background: #46a9be;
     -webkit-transition: opacity 0.45s ease;
     transition: opacity 0.45s ease;
 }
@@ -733,6 +734,10 @@ footer .opening-hours {
 
 footer .bottom-footer {
     margin-top: 150px;
+}
+
+footer .bottom-footer-form {
+    margin-top: 30px;
 }
 
 footer .social-footer {
@@ -1071,6 +1076,17 @@ footer .social-footer li:hover a {
     margin-top: 150px;
 }
 
+.orange{
+    color:#CA5F19;
+}
+
+.turquesa{
+    color: #06697E;
+}
+.verde{
+    color: #32B40A;
+}
+
 @media(max-width:992px) {
     h1 {
         font-size: 36px;
@@ -1153,4 +1169,73 @@ footer .social-footer li:hover a {
 }
 
 
-/* Carrusel Slider*/
+/* Form Styles Expediente*/
+
+.form-table {
+    top: 30px;
+    position: relative;
+}
+
+.panel,
+.panel-primary {
+    background: #CA5F19;
+}
+
+.indent-small {
+    margin-left: 5px;
+}
+
+.form-group.internal {
+    margin-bottom: 0;
+}
+
+.dialog-panel {
+    margin: 10px;
+}
+
+.datepicker-dropdown {
+    z-index: 200 !important;
+}
+
+.panel-heading{
+    background: #CA5F19;
+}
+
+
+.form-background{
+     background: #46a9be;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.panel-body {
+    background: #EBE8E8;
+    /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #e5e5e5), color-stop(100%, #ffffff));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
+    /* IE10+ */
+    background: radial-gradient(ellipse at center, #e5e5e5 0%, #ffffff 100%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#e5e5e5', endColorstr='#ffffff', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    font: 600 15px "Open Sans", Arial, sans-serif;
+}
+
+label.control-label {
+    font-weight: 800;
+    color: #777;
+}
+
+.container-back{
+    position: :relative;
+}
+.center-block{
+    float: none;
+}

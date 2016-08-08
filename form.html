@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- Script-->
+<script>
+date = new Date();
+anyo = date.getFullYear();
+day = date.getDate();
+month = date.getMonth() + 1;
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+today = anyo.toString() + "-" + month.toString() + "-" + day.toString();
+$(document).ready(function(){
+  $("id_nacimiento").attr({"max":today , "min":"2016-08-06" });
+});
+</script>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especialidades Odontológicas | Expediente Clínico</title>
+    <meta name="description" content="Especialista Dental" />
+    <meta name="keywords" content="Dentista, Heredia, Odontologa, Especialidades, Especialista" />
+    <!-- Main style -->
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!-- Owl -->
+    <link rel="stylesheet" type="text/css" href="css/owl.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+    <!-- Elegant Icons -->
+    <link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
+    <link href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="img/favicons/manifest.json">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $('#id_nacimiento').datepicker();
+        });
+    </script> -->
+</head>
+<header id="intro">
+</header>
+
+<body>
+    <div class='form-background'>
+        <div class='container'>
+            <div class="form-table">
+                <div class='panel-heading'>
+                    <h3 class="text-center white">Expediente Clínico del Paciente</h3>
+                </div>
+                <div class='panel-body'>
+                    <form class='form-horizontal' role='form'>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Paciente</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3 indent-small'>
+                                    <div class='form-group internal input-group'>
+                                        <span class='input-group-addon'>
+                                          <i class='glyphicon glyphicon-user'></i>
+                                        </span>
+                                        <input class='form-control' id='id_first_name' placeholder='Nombre' type='text'>
+                                    </div>
+                                </div>
+                                <div class='col-md-3 indent-small'>
+                                    <div class='form-group internal'>
+                                        <input class='form-control' id='id_last_name' placeholder='1er Apellido' type='text'>
+                                    </div>
+                                </div>
+                                <div class='col-md-3 indent-small'>
+                                    <div class='form-group internal'>
+                                        <input class='form-control' id='id_last_name2' placeholder='2do Apellido' type='text'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_adults'>Cédula de Identidad</label>
+                            <div class='col-md-6'>
+                                <div class='col-md-11'>
+                                    <div class='form-group internal input-group'>
+                                        <span class='input-group-addon'>
+                                          <i class='glyphicon glyphicon-pencil'></i>
+                                        </span>
+                                        <input class='form-control col-md-8' id='id_cedula' placeholder='número de cédula' type='number'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_fnacimiento'>Fecha de Nacimiento</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal input-group'>
+                                        <span class='input-group-addon'>
+                                          <i class='glyphicon glyphicon-calendar'></i>
+                                        </span>
+                                        <input type="date" class='form-control datepicker' id='id_nacimiento' min="1920-01-01">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>Contact</label>
+                            <div class='col-md-6'>
+                                <div class='form-group'>
+                                    <div class='col-md-11'>
+                                        <input class='form-control' id='id_email' placeholder='E-mail' type='text'>
+                                    </div>
+                                </div>
+                                <div class='form-group internal'>
+                                    <div class='col-md-11'>
+                                        <input class='form-control' id='id_phone' placeholder='Phone: (xxx) - xxx xxxx' type='text'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Checkin</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal input-group'>
+                                        <input class='form-control datepicker' id='id_checkin'>
+                                        <span class='input-group-addon'>
+                    <i class='glyphicon glyphicon-calendar'></i>
+                  </span>
+                                    </div>
+                                </div>
+                                <label class='control-label col-md-2' for='id_checkout'>Checkout</label>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal input-group'>
+                                        <input class='form-control datepicker' id='id_checkout'>
+                                        <span class='input-group-addon'>
+                    <i class='glyphicon glyphicon-calendar'></i>
+                  </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_equipment'>Equipment type</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_equipment'>
+                                            <option>Travel trailer</option>
+                                            <option>Fifth wheel</option>
+                                            <option>RV/Motorhome</option>
+                                            <option>Tent trailer</option>
+                                            <option>Pickup camper</option>
+                                            <option>Camper van</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class='col-md-9'>
+                                    <div class='form-group internal'>
+                                        <label class='control-label col-md-3' for='id_slide'>Slide-outs</label>
+                                        <div class='make-switch' data-off-label='NO' data-on-label='YES' id='id_slide_switch'>
+                                            <input id='id_slide' type='checkbox' value='chk_hydro'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_service'>Required Service</label>
+                            <div class='col-md-8'>
+                                <select class='multiselect' id='id_service' multiple='multiple'>
+                                    <option value='hydro'>Hydro</option>
+                                    <option value='water'>Water</option>
+                                    <option value='sewer'>Sewer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_pets'>Pets</label>
+                            <div class='col-md-8'>
+                                <div class='make-switch' data-off-label='NO' data-on-label='YES' id='id_pets_switch'>
+                                    <input id='id_pets' type='checkbox' value='chk_hydro'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_comments'>Comments</label>
+                            <div class='col-md-6'>
+                                <textarea class='form-control' id='id_comments' placeholder='Additional comments' rows='3'></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 center-block">
+                            <button type="button" class="btn-lg btn-success center-block">Guardar</button>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 center-block">
+                            <button type="button" class="btn-lg btn-danger center-block">Cancelar</button>
+                        </div>
+                        <div class="container-back">
+                            <button class="btn btn-info" type="button">Regresar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="bottom-footer-form">
+                <div class="col-sm-8">
+                    <p class="white">&copy;
+                        <script>
+                        document.write(anyo);
+                        </script> Todos los Derechos Reservados. Implementado por <a href="#">Andres & Gabriel</a> </p>
+                </div>
+                <div class="col-sm-4 text-right text-center-mobile">
+                    <ul class="social-footer">
+                        <li><a target="_blank" href="https://www.facebook.com/Especialidades.Odontologicas.01"><i class="fa fa-facebook"></i></a></li>
+                        <li><a target="_blank" href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a target="_blank" href=""><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Holder for mobile navigation -->
+    <div class="mobile-nav">
+        <ul>
+        </ul>
+        <a href="#" class="close-link"><i class="arrow_up"></i></a>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
