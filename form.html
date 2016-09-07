@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!-- Script-->
+<script>
+date = new Date();
+anyo = date.getFullYear();
+day = date.getDate();
+month = date.getMonth() + 1;
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+today = anyo.toString() + "-" + month.toString() + "-" + day.toString();
+$(document).ready(function() {
+    $("id_nacimiento").attr({
+        "max": today,
+        "min": "2016-08-06"
+    });
+});
+</script>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especialidades Odontológicas | Expediente Clínico</title>
+    <meta name="description" content="Especialista Dental" />
+    <meta name="keywords" content="Dentista, Heredia, Odontologa, Especialidades, Especialista" />
+    <!-- Main style -->
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!-- Owl -->
+    <link rel="stylesheet" type="text/css" href="css/owl.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+    <!-- Elegant Icons -->
+    <link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
+    <link href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="img/favicons/manifest.json">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $('#id_nacimiento').datepicker();
+        });
+    </script> -->
+    <!--funcion javascript para mostrar encargado -->
+    <script type="text/javascript">
+    <!--
+    function mostrarEncargado() {
+        //Si la opcion con id Conocido_1 (dentro del documento > formulario con name fcontacto >     y a la vez dentro del array de Conocido) esta activada
+        if ((document.getElementById('id_slide')).checked) {
+            //muestra (cambiando la propiedad display del estilo) el div con id 'desdeotro'
+            document.getElementById('encargado').style.display = 'block';
+            //por el contrario, si no esta seleccionada
+        } else {
+            //oculta el div con id 'desdeotro'
+            document.getElementById('encargado').style.display = 'none';
+        }
+    }
+    -->
+    </script>
+</head>
+<header id="intro">
+    <div class='form-background'>
+        <a><img src="img/logos/Logo_Hilda_Vilchez_260x110.png"></a>
+    </div>
+</header>
+
+<body>
+    <div class='form-background'>
+        <div class='container'>
+            <div class="form-table">
+                <div class='panel-heading'>
+                    <h3 class="text-center white">Expediente Clínico-Paciente</h3>
+                </div>
+                <div class='panel-body'>
+                    <form class='form-horizontal' role='form' name='formulario' method="post">
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Fecha Cita</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal input-group'>
+                                        <span class='input-group-addon'>
+                    <i class='glyphicon glyphicon-calendar'></i>
+                  </span>
+                                        <input class='form-control datepicker' id='id_checkin'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Paciente</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3 indent-small'>
+                                    <div class='form-group internal input-group'>
+                                        <span class='input-group-addon'>
+                                          <i class='glyphicon glyphicon-user'></i>
+                                        </span>
+                                        <input class='form-control' id='id_first_name' placeholder='Nombre' type='text'>
+                                    </div>
+                                </div>
+                                <div class='col-md-3 indent-small'>
+                                    <div class='form-group internal'>
+                                        <input class='form-control' id='id_last_name' placeholder='1er Apellido' type='text'>
+                                    </div>
+                                </div>
+                                <div class='col-md-3 indent-small'>
+                                    <div class='form-group internal'>
+                                        <input class='form-control' id='id_last_name2' placeholder='2do Apellido' type='text'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_adults'>Cédula de Identidad</label>
+                            <div class='col-md-6'>
+                                <div class='col-md-11'>
+                                    <div class='form-group internal input-group'>
+                                        <span class='input-group-addon'>
+                                          <i class='glyphicon glyphicon-pencil'></i>
+                                        </span>
+                                        <input class='form-control col-md-8' id='id_cedula' placeholder='número de cédula' type='number'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_fnacimiento'>Fecha de Nacimiento</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal input-group'>
+                                        <span class='input-group-addon'>
+                                          <i class='glyphicon glyphicon-calendar'></i>
+                                        </span>
+                                        <input type="date" class='form-control datepicker' id='id_nacimiento' min="1920-01-01">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_profesion'>Edad</label>
+                            <div class='col-md-6'>
+                                <div class='col-md-4'>
+                                    <div class='form-group internal input-group'>
+                                        <input class='form-control col-md-8' id='id_profesion' placeholder='años cumplidos' type='number' min='0'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_slide'>Menor Edad ?</label>
+                            <div class='col-md-6'>
+                                <div class='col-md-4'>
+                                    <div class='form-group internal input-group'>
+                                        <input id='id_slide' type='checkbox' value='1' onchange='javascript:mostrarEncargado()'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group' id='encargado' style='display: none;'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Encargado</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3 indent-small'>
+                                    <div class='form-group internal input-group'>
+                                        <span class='input-group-addon'>
+                                          <i class='glyphicon glyphicon-user'></i>
+                                        </span>
+                                        <input class='form-control' id='id_first_name' placeholder='Nombre' type='text' value=''>
+                                    </div>
+                                </div>
+                                <div class='col-md-3 indent-small'>
+                                    <div class='form-group internal'>
+                                        <input class='form-control' id='id_last_name' placeholder='1er Apellido' type='text' value=''>
+                                    </div>
+                                </div>
+                                <div class='col-md-3 indent-small'>
+                                    <div class='form-group internal'>
+                                        <input class='form-control' id='id_last_name2' placeholder='2do Apellido' type='text' value=''>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_estado_civil'>Estado Civil </label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_estado_civil'>
+                                            <option>Soltero(a)</option>
+                                            <option>Casado(a)</option>
+                                            <option>Divorciado(a)</option>
+                                            <option>Viudo(a)</option>
+                                            <option>Unión Libre</option>
+                                            <option>Otros</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_domicilo'>Domicilo</label>
+                            <div class='col-md-6'>
+                                <span class='input-group-addon'>
+                    <i class='glyphicon glyphicon-home'></i>
+                  </span>
+                                <textarea class='form-control' id='id_domicilo' placeholder='' rows='3'></textarea>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_telefono'>Teléfonos</label>
+                            <div class='col-md-6'>
+                                <div class='form-group'>
+                                    <div class='col-md-6' '>
+                                        <input class='form-control ' id='id_cel ' placeholder='celular: xxxx-xxxx ' type='number '>
+                                    </div>
+                                    <div class='col-md-6 ''>
+                                        <input class='form-control' id='id_casa' placeholder='casa:  xxxx - xxxx' type='number'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_profesion'>Profesión/ Oficio</label>
+                            <div class='col-md-6'>
+                                <div class='col-md-11'>
+                                    <div class='form-group internal input-group'>
+                                        <input class='form-control col-md-8' id='id_profesion' placeholder='oficio' type='text'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>Correo</label>
+                            <div class='col-md-6'>
+                                <div class='form-group'>
+                                    <div class='col-md-11'>
+                                        <input class='form-control' id='id_email' placeholder='E-mail' type='text'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_domicilo'>En caso emergencia contactar con:</label>
+                            <div class='col-md-6'>
+                                <textarea class='form-control' id='id_domicilo' placeholder='nombre, número teléfono' rows='3'></textarea>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <h4 class="text-center">Condición Médica</h4>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Está bajo tratamiento médico</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class='control-label col-md-2' for='id_checkout'>Toma algún medicamento</label>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class='form-group'>
+                            <h4 class="text-center">Padecimientos</h4>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Diabetes Mellitus</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class='control-label col-md-2' for='id_checkout'>Artritis</label>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Enfermedades cardíacas</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class='control-label col-md-2' for='id_checkout'>Hepatitis</label>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Fiebre reumática</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class='control-label col-md-2' for='id_checkout'>Úlceras</label>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Presión arterial alta</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class='control-label col-md-2' for='id_checkout'>Presión arterial baja</label>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Enfermedades nerviosas</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class='control-label col-md-2' for='id_checkout'>Otras enfermedades</label>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Sangrado prolongado</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class='control-label col-md-2' for='id_checkout'>Desmayos</label>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Sometido a intervención quirúrgica</label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                        <h4 class="text-center">Alergias</h4>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Aspirina </label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                            <option>No sabe</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class='control-label col-md-2' for='id_checkout'>Penicilina</label>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                            <option>No sabe</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Sulfas </label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                            <option>No sabe</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class='control-label col-md-2' for='id_checkout'>Otros</label>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                            <option>No sabe</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class='form-group'>
+                        <h4 class="text-center">Precondiciones </h4>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Ha tenido reacción anormal a la anestecia dental? </label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                            <option>No sabe</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Está embarazada? </label>
+                            <div class='col-md-8'>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                            <option>No sabe</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class='control-label col-md-2' for='id_checkout'>En período de lactancia?</label>
+                                <div class='col-md-3'>
+                                    <div class='form-group internal'>
+                                        <select class='form-control' id='id_tratamiento'>
+                                            <option>No</option>
+                                            <option>Si</option>
+                                            <option>No sabe</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' for='id_comments'>Observaciones</label>
+                            <div class='col-md-6'>
+                                <textarea class='form-control' id='id_comments' placeholder='' rows='3'></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 center-block">
+                            <button type="button" class="btn-lg btn-success center-block">Guardar</button>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 center-block">
+                            <button type="button" class="btn-lg btn-danger center-block">Cancelar</button>
+                        </div>
+                        <div class="container-back">
+                            <button class="btn btn-info" type="button">Regresar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="bottom-footer-form">
+                <div class="col-sm-8">
+                    <p class="white">&copy;
+                        <script>
+                        document.write(anyo);
+                        </script> Todos los Derechos Reservados. Implementado por <a href="#">Andres & Gabriel</a> </p>
+                </div>
+                <div class="col-sm-4 text-right text-center-mobile">
+                    <ul class="social-footer">
+                        <li><a target="_blank" href="https://www.facebook.com/Especialidades.Odontologicas.01"><i class="fa fa-facebook"></i></a></li>
+                        <li><a target="_blank" href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a target="_blank" href=""><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Holder for mobile navigation -->
+    <div class="mobile-nav">
+        <ul>
+        </ul>
+        <a href="#" class="close-link"><i class="arrow_up"></i></a>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
